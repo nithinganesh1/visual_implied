@@ -1,0 +1,21 @@
+# Smart Assistive Navigation System - Dependencies
+# For Raspberry Pi 5
+
+# YOLO and Computer Vision
+ultralytics>=8.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# GPIO Control (Raspberry Pi 5 compatible)
+gpiozero>=2.0
+
+# Serial Communication (GPS and GSM)
+pyserial>=3.5
+
+# Optional: Alternative TTS (if not using espeak)
+# pyttsx3>=2.90
+
+# System dependencies (install via apt):
+# sudo apt-get update
+# sudo apt-get install -y espeak python3-pip python3-opencv
+# sudo apt-get install -y libatlas-base-dev libopenblas-dev

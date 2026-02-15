@@ -1,0 +1,901 @@
+2026-02-13 10:39:27 - NavigationSystem - INFO - Initializing Smart Navigation System...
+2026-02-13 10:39:27 - NavigationSystem - INFO - Audio manager initialized with espeak TTS
+2026-02-13 10:39:27 - NavigationSystem - INFO - Loading YOLO model from best.pt
+2026-02-13 10:39:27 - NavigationSystem - INFO - Initializing camera 0
+2026-02-13 10:39:28 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:28 - NavigationSystem - INFO - Camera initialized: 640x480
+2026-02-13 10:39:28 - NavigationSystem - ERROR - GPS connection failed: [Errno 2] could not open port /dev/ttyUSB0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+2026-02-13 10:39:28 - NavigationSystem - WARNING - GPS module initialization failed - location unavailable
+2026-02-13 10:39:28 - NavigationSystem - INFO - GSM module initialized for +916282670289
+2026-02-13 10:39:28 - NavigationSystem - INFO - GSM port: /dev/serial0 @ 9600 baud
+2026-02-13 10:39:28 - NavigationSystem - INFO - Initializing primary button on GPIO 17
+2026-02-13 10:39:28 - NavigationSystem - INFO - Button handler initialized
+2026-02-13 10:39:28 - NavigationSystem - INFO - System initialization complete
+2026-02-13 10:39:28 - NavigationSystem - INFO - Speaking (priority 5): Navigation system ready
+2026-02-13 10:39:28 - NavigationSystem - ERROR - espeak not found. Install with: sudo apt-get install espeak
+2026-02-13 10:39:28 - NavigationSystem - INFO - Navigation system running. Press button to scan.
+2026-02-13 10:39:28 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:29 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:29 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:30 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:30 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:31 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:31 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:32 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:32 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:33 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:33 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:34 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:34 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:35 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:35 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:36 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:36 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:37 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:37 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:38 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:38 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:39 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:39 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:40 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:40 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:41 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:41 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:42 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:42 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:43 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:43 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:44 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:44 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:45 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:45 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:46 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:46 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:47 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:47 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:48 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:48 - NavigationSystem - INFO - Shutting down navigation system...
+2026-02-13 10:39:48 - NavigationSystem - INFO - Speaking (priority 5): System shutting down
+2026-02-13 10:39:48 - NavigationSystem - ERROR - espeak not found. Install with: sudo apt-get install espeak
+2026-02-13 10:39:48 - NavigationSystem - INFO - Cleaning up button handler
+2026-02-13 10:39:48 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:48 - NavigationSystem - INFO - Button handler cleanup complete
+2026-02-13 10:39:48 - NavigationSystem - INFO - Camera released
+2026-02-13 10:39:48 - NavigationSystem - INFO - Cleaning up GPS module
+2026-02-13 10:39:48 - NavigationSystem - INFO - GPS cleanup complete
+2026-02-13 10:39:48 - NavigationSystem - INFO - Cleaning up audio manager
+2026-02-13 10:39:49 - NavigationSystem - INFO - Shutting down navigation system...
+2026-02-13 10:39:49 - NavigationSystem - INFO - Speaking (priority 5): System shutting down
+2026-02-13 10:39:49 - NavigationSystem - ERROR - espeak not found. Install with: sudo apt-get install espeak
+2026-02-13 10:39:49 - NavigationSystem - INFO - Cleaning up button handler
+2026-02-13 10:39:49 - NavigationSystem - INFO - Button handler cleanup complete
+2026-02-13 10:39:49 - NavigationSystem - INFO - Cleaning up GPS module
+2026-02-13 10:39:49 - NavigationSystem - INFO - GPS cleanup complete
+2026-02-13 10:39:49 - NavigationSystem - INFO - Cleaning up audio manager
+2026-02-13 10:39:49 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:39:49 - NavigationSystem - INFO - Audio manager cleanup complete
+2026-02-13 10:39:49 - NavigationSystem - INFO - Shutdown complete
+2026-02-13 10:58:52 - NavigationSystem - INFO - Initializing Smart Navigation System...
+2026-02-13 10:58:52 - NavigationSystem - INFO - Audio manager initialized with espeak TTS
+2026-02-13 10:58:52 - NavigationSystem - INFO - Loading YOLO model from best.pt
+2026-02-13 10:58:52 - NavigationSystem - INFO - Initializing camera 0
+2026-02-13 10:58:53 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:58:53 - NavigationSystem - INFO - Camera initialized: 640x480
+2026-02-13 10:58:53 - NavigationSystem - ERROR - GPS connection failed: [Errno 2] could not open port /dev/ttyUSB0: [Errno 2] No such file or directory: '/dev/ttyUSB0'
+2026-02-13 10:58:53 - NavigationSystem - WARNING - GPS module initialization failed - location unavailable
+2026-02-13 10:58:53 - NavigationSystem - INFO - GSM module initialized for +916282670289
+2026-02-13 10:58:53 - NavigationSystem - INFO - GSM port: /dev/serial0 @ 9600 baud
+2026-02-13 10:58:53 - NavigationSystem - INFO - Initializing primary button on GPIO 17
+2026-02-13 10:58:53 - NavigationSystem - INFO - Button handler initialized
+2026-02-13 10:58:53 - NavigationSystem - INFO - System initialization complete
+2026-02-13 10:58:53 - NavigationSystem - INFO - Speaking (priority 5): Navigation system ready
+2026-02-13 10:58:53 - NavigationSystem - ERROR - espeak not found. Install with: sudo apt-get install espeak
+2026-02-13 10:58:53 - NavigationSystem - INFO - Navigation system running. Press button to scan.
+2026-02-13 10:58:53 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:58:54 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:58:54 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:58:55 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:58:55 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:58:56 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:58:56 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:58:57 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:58:57 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:58:58 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:58:58 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:58:59 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:58:59 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:00 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:00 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:01 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:01 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:02 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:02 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:03 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:03 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:04 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:04 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:05 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:05 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:06 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:06 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:07 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:07 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:08 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:08 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:09 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:09 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:10 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:10 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:11 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:11 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:12 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:12 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:13 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:13 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:14 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:14 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:15 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:15 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:16 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:16 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:17 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:17 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:18 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:18 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:19 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:19 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:20 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:20 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:21 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:21 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:22 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:22 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:23 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:23 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:24 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:24 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:25 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:25 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:26 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:26 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:27 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:27 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:28 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:28 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:29 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:29 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:30 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:30 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:31 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:31 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:32 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:32 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:33 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:33 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:34 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:34 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:35 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:35 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:36 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:36 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:37 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:37 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:38 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:38 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:39 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:39 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:40 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:40 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:41 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:41 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:42 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:42 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:43 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:43 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:44 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:44 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:45 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:45 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:46 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:46 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:47 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:47 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:48 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:48 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:49 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:49 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:50 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:50 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:51 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:51 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:52 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:52 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:53 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:53 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:54 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:54 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:55 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:55 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:56 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:56 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:57 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:57 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:58 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:58 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:59 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 10:59:59 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:00 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:00 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:01 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:01 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:02 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:02 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:03 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:03 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:04 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:04 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:05 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:05 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:06 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:06 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:07 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:07 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:08 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:08 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:09 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:09 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:10 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:10 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:11 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:11 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:12 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:12 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:13 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:13 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:14 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:14 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:15 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:15 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:16 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:16 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:17 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:17 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:18 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:18 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:19 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:19 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:20 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:20 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:21 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:21 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:22 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:22 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:23 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:23 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:24 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:24 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:25 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:25 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:26 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:26 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:27 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:27 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:28 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:28 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:29 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:29 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:30 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:30 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:31 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:31 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:32 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:32 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:33 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:33 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:34 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:34 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:35 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:35 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:36 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:36 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:37 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:37 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:38 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:38 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:39 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:39 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:40 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:40 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:41 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:41 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:42 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:42 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:43 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:43 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:44 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:44 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:45 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:45 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:46 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:46 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:47 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:47 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:48 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:48 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:49 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:49 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:50 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:50 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:51 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:51 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:52 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:52 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:53 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:53 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:54 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:54 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:55 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:55 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:56 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:56 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:57 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:57 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:58 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:58 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:59 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:00:59 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:00 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:00 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:01 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:01 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:02 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:02 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:03 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:03 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:04 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:04 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:05 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:05 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:06 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:06 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:07 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:07 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:08 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:08 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:09 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:09 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:10 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:10 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:11 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:11 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:12 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:12 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:13 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:13 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:14 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:14 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:15 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:15 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:16 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:16 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:17 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:17 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:18 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:18 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:19 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:19 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:20 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:20 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:21 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:21 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:22 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:22 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:23 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:23 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:24 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:24 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:25 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:25 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:26 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:26 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:27 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:27 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:28 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:28 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:29 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:29 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:30 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:30 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:31 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:31 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:32 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:32 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:33 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:33 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:34 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:34 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:35 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:35 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:36 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:36 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:37 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:37 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:38 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:38 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:39 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:39 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:40 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:40 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:41 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:41 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:42 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:42 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:43 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:43 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:44 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:44 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:45 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:45 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:46 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:46 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:47 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:47 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:48 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:48 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:49 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:49 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:50 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:50 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:51 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:51 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:52 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:52 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:53 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:53 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:54 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:54 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:55 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:55 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:56 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:56 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:57 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:57 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:58 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:58 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:59 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:01:59 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:00 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:00 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:01 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:01 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:02 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:02 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:03 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:03 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:04 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:04 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:05 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:05 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:06 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:06 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:07 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:07 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:08 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:08 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:09 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:09 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:10 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:10 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:11 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:11 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:12 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:12 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:13 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:13 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:14 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:14 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:15 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:15 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:16 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:16 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:17 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:17 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:18 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:18 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:19 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:19 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:20 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:20 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:21 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:21 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:22 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:22 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:23 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:23 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:24 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:24 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:25 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:25 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:26 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:26 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:27 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:27 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:28 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:28 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:29 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:29 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:30 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:30 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:31 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:31 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:32 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:32 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:33 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:33 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:34 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:34 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:35 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:35 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:36 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:36 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:37 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:37 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:38 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:38 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:39 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:39 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:40 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:40 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:41 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:41 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:42 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:42 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:43 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:43 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:44 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:44 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:45 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:45 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:46 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:46 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:47 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:47 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:48 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:48 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:49 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:49 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:50 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:50 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:51 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:51 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:52 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:52 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:53 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:53 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:54 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:54 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:55 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:55 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:56 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:56 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:57 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:57 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:58 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:58 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:59 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:02:59 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:03:00 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:03:00 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:03:01 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:03:01 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:03:02 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:03:02 - NavigationSystem - INFO - Shutting down navigation system...
+2026-02-13 11:03:02 - NavigationSystem - INFO - Speaking (priority 5): System shutting down
+2026-02-13 11:03:02 - NavigationSystem - ERROR - espeak not found. Install with: sudo apt-get install espeak
+2026-02-13 11:03:02 - NavigationSystem - INFO - Cleaning up button handler
+2026-02-13 11:03:02 - NavigationSystem - INFO - Button handler cleanup complete
+2026-02-13 11:03:02 - NavigationSystem - INFO - Camera released
+2026-02-13 11:03:02 - NavigationSystem - INFO - Cleaning up GPS module
+2026-02-13 11:03:02 - NavigationSystem - INFO - GPS cleanup complete
+2026-02-13 11:03:02 - NavigationSystem - INFO - Cleaning up audio manager
+2026-02-13 11:03:02 - NavigationSystem - INFO - Shutting down navigation system...
+2026-02-13 11:03:02 - NavigationSystem - INFO - Speaking (priority 5): System shutting down
+2026-02-13 11:03:02 - NavigationSystem - ERROR - espeak not found. Install with: sudo apt-get install espeak
+2026-02-13 11:03:02 - NavigationSystem - INFO - Cleaning up button handler
+2026-02-13 11:03:02 - NavigationSystem - INFO - Button handler cleanup complete
+2026-02-13 11:03:02 - NavigationSystem - INFO - Cleaning up GPS module
+2026-02-13 11:03:02 - NavigationSystem - INFO - GPS cleanup complete
+2026-02-13 11:03:02 - NavigationSystem - INFO - Cleaning up audio manager
+2026-02-13 11:03:02 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:03:02 - NavigationSystem - INFO - Audio manager cleanup complete
+2026-02-13 11:03:02 - NavigationSystem - INFO - Shutdown complete
+2026-02-13 11:03:02 - NavigationSystem - INFO - Shutting down navigation system...
+2026-02-13 11:03:02 - NavigationSystem - INFO - Speaking (priority 5): System shutting down
+2026-02-13 11:03:02 - NavigationSystem - ERROR - espeak not found. Install with: sudo apt-get install espeak
+2026-02-13 11:03:02 - NavigationSystem - INFO - Cleaning up button handler
+2026-02-13 11:03:02 - NavigationSystem - INFO - Button handler cleanup complete
+2026-02-13 11:03:02 - NavigationSystem - INFO - Cleaning up GPS module
+2026-02-13 11:03:02 - NavigationSystem - INFO - GPS cleanup complete
+2026-02-13 11:03:02 - NavigationSystem - INFO - Cleaning up audio manager
+2026-02-13 11:03:02 - NavigationSystem - INFO - Audio manager cleanup complete
+2026-02-13 11:03:02 - NavigationSystem - INFO - Shutdown complete
+2026-02-13 11:08:12 - NavigationSystem - INFO - Initializing Smart Navigation System...
+2026-02-13 11:08:12 - NavigationSystem - INFO - Audio manager initialized with espeak TTS
+2026-02-13 11:08:12 - NavigationSystem - INFO - Loading YOLO model from best.pt
+2026-02-13 11:08:12 - NavigationSystem - INFO - Initializing camera 0
+2026-02-13 11:08:12 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:12 - NavigationSystem - INFO - Camera initialized: 640x480
+2026-02-13 11:08:12 - NavigationSystem - INFO - Fixed GPS module initialized
+2026-02-13 11:08:12 - NavigationSystem - INFO - GSM module initialized for +916282670289
+2026-02-13 11:08:12 - NavigationSystem - INFO - GSM port: /dev/serial0 @ 9600 baud
+2026-02-13 11:08:12 - NavigationSystem - INFO - Initializing primary button on GPIO 17
+2026-02-13 11:08:12 - NavigationSystem - INFO - Button handler initialized
+2026-02-13 11:08:12 - NavigationSystem - INFO - System initialization complete
+2026-02-13 11:08:12 - NavigationSystem - INFO - Speaking (priority 5): Navigation system ready
+2026-02-13 11:08:12 - NavigationSystem - ERROR - espeak not found. Install with: sudo apt-get install espeak
+2026-02-13 11:08:12 - NavigationSystem - INFO - Navigation system running. Press button to scan.
+2026-02-13 11:08:13 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:13 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:14 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:14 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:15 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:15 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:16 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:16 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:17 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:17 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:18 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:18 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:19 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:19 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:20 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:20 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:21 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:21 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:21 - NavigationSystem - INFO - Shutting down navigation system...
+2026-02-13 11:08:21 - NavigationSystem - INFO - Speaking (priority 5): System shutting down
+2026-02-13 11:08:21 - NavigationSystem - ERROR - espeak not found. Install with: sudo apt-get install espeak
+2026-02-13 11:08:21 - NavigationSystem - INFO - Cleaning up button handler
+2026-02-13 11:08:21 - NavigationSystem - INFO - Button handler cleanup complete
+2026-02-13 11:08:21 - NavigationSystem - INFO - Camera released
+2026-02-13 11:08:21 - NavigationSystem - INFO - Cleaning up audio manager
+2026-02-13 11:08:22 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:22 - NavigationSystem - INFO - Audio manager cleanup complete
+2026-02-13 11:08:22 - NavigationSystem - INFO - Shutdown complete
+2026-02-13 11:08:38 - NavigationSystem - INFO - Initializing Smart Navigation System...
+2026-02-13 11:08:38 - NavigationSystem - INFO - Audio manager initialized with espeak TTS
+2026-02-13 11:08:38 - NavigationSystem - INFO - Loading YOLO model from best.pt
+2026-02-13 11:08:38 - NavigationSystem - INFO - Initializing camera 0
+2026-02-13 11:08:39 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:39 - NavigationSystem - INFO - Camera initialized: 640x480
+2026-02-13 11:08:39 - NavigationSystem - INFO - Fixed GPS module initialized
+2026-02-13 11:08:39 - NavigationSystem - INFO - GSM module initialized for +916282670289
+2026-02-13 11:08:39 - NavigationSystem - INFO - GSM port: /dev/serial0 @ 9600 baud
+2026-02-13 11:08:39 - NavigationSystem - INFO - Initializing primary button on GPIO 17
+2026-02-13 11:08:39 - NavigationSystem - INFO - Button handler initialized
+2026-02-13 11:08:39 - NavigationSystem - INFO - System initialization complete
+2026-02-13 11:08:39 - NavigationSystem - INFO - Speaking (priority 5): Navigation system ready
+2026-02-13 11:08:39 - NavigationSystem - ERROR - espeak not found. Install with: sudo apt-get install espeak
+2026-02-13 11:08:39 - NavigationSystem - INFO - Navigation system running. Press button to scan.
+2026-02-13 11:08:39 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:40 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:40 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:41 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:41 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:42 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:42 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:43 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:43 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:44 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:44 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:45 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:45 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:46 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:46 - NavigationSystem - INFO - Shutting down navigation system...
+2026-02-13 11:08:46 - NavigationSystem - INFO - Speaking (priority 5): System shutting down
+2026-02-13 11:08:46 - NavigationSystem - ERROR - espeak not found. Install with: sudo apt-get install espeak
+2026-02-13 11:08:46 - NavigationSystem - INFO - Cleaning up button handler
+2026-02-13 11:08:46 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:46 - NavigationSystem - INFO - Button handler cleanup complete
+2026-02-13 11:08:46 - NavigationSystem - INFO - Camera released
+2026-02-13 11:08:46 - NavigationSystem - INFO - Cleaning up audio manager
+2026-02-13 11:08:47 - NavigationSystem - INFO - Shutting down navigation system...
+2026-02-13 11:08:47 - NavigationSystem - INFO - Speaking (priority 5): System shutting down
+2026-02-13 11:08:47 - NavigationSystem - ERROR - espeak not found. Install with: sudo apt-get install espeak
+2026-02-13 11:08:47 - NavigationSystem - INFO - Cleaning up button handler
+2026-02-13 11:08:47 - NavigationSystem - INFO - Button handler cleanup complete
+2026-02-13 11:08:47 - NavigationSystem - INFO - Cleaning up audio manager
+2026-02-13 11:08:47 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:08:47 - NavigationSystem - INFO - Audio manager cleanup complete
+2026-02-13 11:08:47 - NavigationSystem - INFO - Shutdown complete
+2026-02-13 11:11:38 - NavigationSystem - INFO - Initializing Smart Navigation System...
+2026-02-13 11:11:38 - NavigationSystem - INFO - Audio manager initialized with espeak TTS
+2026-02-13 11:11:38 - NavigationSystem - INFO - Loading YOLO model from best.pt
+2026-02-13 11:11:39 - NavigationSystem - INFO - Initializing camera 0
+2026-02-13 11:11:39 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:11:39 - NavigationSystem - INFO - Camera initialized: 640x480
+2026-02-13 11:11:39 - NavigationSystem - INFO - Fixed GPS module initialized
+2026-02-13 11:11:39 - NavigationSystem - INFO - GSM module initialized for +916282670289
+2026-02-13 11:11:39 - NavigationSystem - INFO - GSM port: /dev/serial0 @ 9600 baud
+2026-02-13 11:11:39 - NavigationSystem - INFO - Initializing primary button on GPIO 17
+2026-02-13 11:11:39 - NavigationSystem - INFO - Button handler initialized
+2026-02-13 11:11:39 - NavigationSystem - INFO - System initialization complete
+2026-02-13 11:11:39 - NavigationSystem - INFO - Speaking (priority 5): Navigation system ready
+2026-02-13 11:11:39 - NavigationSystem - INFO - Navigation system running. Press button to scan.
+2026-02-13 11:11:39 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:11:40 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:11:40 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:11:41 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:11:41 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:11:42 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:11:42 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:11:43 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:11:43 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:11:44 - NavigationSystem - INFO - Shutting down navigation system...
+2026-02-13 11:11:44 - NavigationSystem - INFO - Speaking (priority 5): System shutting down
+2026-02-13 11:11:44 - NavigationSystem - INFO - Cleaning up button handler
+2026-02-13 11:11:44 - NavigationSystem - INFO - Button handler cleanup complete
+2026-02-13 11:11:44 - NavigationSystem - INFO - Camera released
+2026-02-13 11:11:44 - NavigationSystem - INFO - Cleaning up audio manager
+2026-02-13 11:11:44 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:11:44 - NavigationSystem - INFO - Audio manager cleanup complete
+2026-02-13 11:11:44 - NavigationSystem - INFO - Shutdown complete
+2026-02-13 11:56:29 - NavigationSystem - INFO - Initializing Smart Navigation System...
+2026-02-13 11:56:29 - NavigationSystem - INFO - Audio manager initialized with espeak TTS
+2026-02-13 11:56:29 - NavigationSystem - INFO - Loading YOLO model from best.pt
+2026-02-13 11:56:29 - NavigationSystem - INFO - Initializing camera 0
+2026-02-13 11:56:29 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:30 - NavigationSystem - INFO - Camera initialized: 640x480
+2026-02-13 11:56:30 - NavigationSystem - INFO - Fixed GPS module initialized
+2026-02-13 11:56:30 - NavigationSystem - INFO - GSM module initialized for +916282670289
+2026-02-13 11:56:30 - NavigationSystem - INFO - GSM port: /dev/serial0 @ 9600 baud
+2026-02-13 11:56:30 - NavigationSystem - INFO - Initializing primary button on GPIO 17
+2026-02-13 11:56:30 - NavigationSystem - INFO - Button handler initialized
+2026-02-13 11:56:30 - NavigationSystem - INFO - System initialization complete
+2026-02-13 11:56:30 - NavigationSystem - INFO - Speaking (priority 5): Navigation system ready
+2026-02-13 11:56:30 - NavigationSystem - INFO - Navigation system running. Press button to scan.
+2026-02-13 11:56:30 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:30 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:31 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:31 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:32 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:32 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:33 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:33 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:34 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:35 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:35 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:36 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:36 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:37 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:37 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:37 - NavigationSystem - INFO - Shutting down navigation system...
+2026-02-13 11:56:37 - NavigationSystem - INFO - Speaking (priority 5): System shutting down
+2026-02-13 11:56:37 - NavigationSystem - INFO - Cleaning up button handler
+2026-02-13 11:56:37 - NavigationSystem - INFO - Button handler cleanup complete
+2026-02-13 11:56:37 - NavigationSystem - INFO - Camera released
+2026-02-13 11:56:37 - NavigationSystem - INFO - Cleaning up audio manager
+2026-02-13 11:56:38 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 11:56:38 - NavigationSystem - INFO - Audio manager cleanup complete
+2026-02-13 11:56:38 - NavigationSystem - INFO - Shutdown complete
+2026-02-13 12:01:19 - NavigationSystem - INFO - Initializing Smart Navigation System...
+2026-02-13 12:01:19 - NavigationSystem - INFO - Audio manager initialized with espeak TTS
+2026-02-13 12:01:19 - NavigationSystem - INFO - Loading YOLO model from best.pt
+2026-02-13 12:01:19 - NavigationSystem - INFO - Initializing camera 0
+2026-02-13 12:01:20 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 12:01:20 - NavigationSystem - INFO - Camera initialized: 640x480
+2026-02-13 12:01:20 - NavigationSystem - INFO - Fixed GPS module initialized
+2026-02-13 12:01:20 - NavigationSystem - INFO - GSM module initialized for +916282670289
+2026-02-13 12:01:20 - NavigationSystem - INFO - GSM port: /dev/serial0 @ 9600 baud
+2026-02-13 12:01:20 - NavigationSystem - INFO - Initializing primary button on GPIO 17
+2026-02-13 12:01:20 - NavigationSystem - INFO - Button handler initialized
+2026-02-13 12:01:20 - NavigationSystem - INFO - System initialization complete
+2026-02-13 12:01:20 - NavigationSystem - INFO - Speaking (priority 5): Navigation system ready
+2026-02-13 12:01:20 - NavigationSystem - INFO - Navigation system running. Press button to scan.
+2026-02-13 12:01:20 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 12:01:21 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 12:01:21 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 12:01:22 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 12:01:22 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 12:01:23 - NavigationSystem - INFO - Shutting down navigation system...
+2026-02-13 12:01:23 - NavigationSystem - INFO - Speaking (priority 5): System shutting down
+2026-02-13 12:01:23 - NavigationSystem - INFO - Cleaning up button handler
+2026-02-13 12:01:23 - NavigationSystem - INFO - Button handler cleanup complete
+2026-02-13 12:01:23 - NavigationSystem - INFO - Camera released
+2026-02-13 12:01:23 - NavigationSystem - INFO - Cleaning up audio manager
+2026-02-13 12:01:23 - NavigationSystem - ERROR - Queue processing error: 
+2026-02-13 12:01:23 - NavigationSystem - INFO - Audio manager cleanup complete
+2026-02-13 12:01:23 - NavigationSystem - INFO - Shutdown complete
+2026-02-13 12:02:54 - NavigationSystem - INFO - Initializing Smart Navigation System...
+2026-02-13 12:02:54 - NavigationSystem - INFO - Audio manager initialized with espeak TTS
+2026-02-13 12:02:54 - NavigationSystem - INFO - Loading YOLO model from best.pt
+2026-02-13 12:02:54 - NavigationSystem - INFO - Initializing camera 0
+2026-02-13 12:02:55 - NavigationSystem - INFO - Camera initialized: 640x480
+2026-02-13 12:02:55 - NavigationSystem - INFO - Fixed GPS module initialized
+2026-02-13 12:02:55 - NavigationSystem - INFO - GSM module initialized for +916282670289
+2026-02-13 12:02:55 - NavigationSystem - INFO - GSM port: /dev/serial0 @ 9600 baud
+2026-02-13 12:02:55 - NavigationSystem - INFO - Initializing primary button on GPIO 17
+2026-02-13 12:02:55 - NavigationSystem - INFO - Button handler initialized
+2026-02-13 12:02:55 - NavigationSystem - INFO - System initialization complete
+2026-02-13 12:02:55 - NavigationSystem - INFO - Speaking (priority 5): Navigation system ready
+2026-02-13 12:02:55 - NavigationSystem - INFO - Navigation system running. Press button to scan.
+2026-02-13 12:03:13 - NavigationSystem - INFO - Executing action for 1 press(es)
+2026-02-13 12:03:13 - NavigationSystem - INFO - Single press detected - performing scene scan
+2026-02-13 12:03:13 - NavigationSystem - INFO - Speaking (priority 5): Scanning
+2026-02-13 12:03:14 - NavigationSystem - INFO - Speaking (priority 5): No significant objects detected
+2026-02-13 12:04:14 - NavigationSystem - INFO - Executing action for 1 press(es)
+2026-02-13 12:04:14 - NavigationSystem - INFO - Single press detected - performing scene scan
+2026-02-13 12:04:14 - NavigationSystem - INFO - Speaking (priority 5): Scanning
+2026-02-13 12:04:14 - NavigationSystem - INFO - Speaking (priority 5): No significant objects detected
+2026-02-13 12:04:22 - NavigationSystem - INFO - Executing action for 1 press(es)
+2026-02-13 12:04:22 - NavigationSystem - INFO - Single press detected - performing scene scan
+2026-02-13 12:04:22 - NavigationSystem - INFO - Speaking (priority 5): Scanning
+2026-02-13 12:04:22 - NavigationSystem - INFO - Speaking (priority 5): No significant objects detected
+2026-02-13 12:04:25 - NavigationSystem - INFO - Executing action for 1 press(es)
+2026-02-13 12:04:25 - NavigationSystem - INFO - Single press detected - performing scene scan
+2026-02-13 12:04:25 - NavigationSystem - INFO - Speaking (priority 5): Scanning
+2026-02-13 12:04:25 - NavigationSystem - INFO - Speaking (priority 5): No significant objects detected
+2026-02-13 12:04:26 - NavigationSystem - INFO - Executing action for 1 press(es)
+2026-02-13 12:04:26 - NavigationSystem - INFO - Single press detected - performing scene scan
+2026-02-13 12:04:26 - NavigationSystem - INFO - Speaking (priority 5): Scanning
+2026-02-13 12:04:26 - NavigationSystem - INFO - Speaking (priority 5): No significant objects detected
+2026-02-13 12:04:29 - NavigationSystem - INFO - Executing action for 2 press(es)
+2026-02-13 12:04:29 - NavigationSystem - INFO - Double press ignored - no pending confirmation
+2026-02-13 12:04:30 - NavigationSystem - INFO - Executing action for 1 press(es)
+2026-02-13 12:04:30 - NavigationSystem - INFO - Single press detected - performing scene scan
+2026-02-13 12:04:30 - NavigationSystem - INFO - Speaking (priority 5): Scanning
+2026-02-13 12:04:30 - NavigationSystem - INFO - Speaking (priority 5): No significant objects detected
+2026-02-13 12:04:32 - NavigationSystem - INFO - Executing action for 3 press(es)
+2026-02-13 12:04:34 - NavigationSystem - INFO - Executing action for 1 press(es)
+2026-02-13 12:04:34 - NavigationSystem - INFO - Single press detected - performing scene scan
+2026-02-13 12:04:34 - NavigationSystem - INFO - Speaking (priority 5): Scanning
+2026-02-13 12:04:35 - NavigationSystem - INFO - Speaking (priority 5): No significant objects detected
+2026-02-13 12:04:36 - NavigationSystem - INFO - Button held - EMERGENCY triggered
+2026-02-13 12:04:36 - NavigationSystem - INFO - EMERGENCY TRIGGERED
+2026-02-13 12:04:36 - NavigationSystem - INFO - Speaking (priority 5): Sending emergency alert
+2026-02-13 12:04:36 - NavigationSystem - INFO - Attempting to send SMS: EMERGENCY ALERT! Location: 11.258753,75.780411 - https://maps.google.com/?q=11.258753,75.780411
+2026-02-13 12:04:36 - NavigationSystem - INFO - GSM serial connection opened
+2026-02-13 12:05:14 - NavigationSystem - ERROR - SMS send failed - no OK response
+2026-02-13 12:05:14 - NavigationSystem - INFO - Speaking (priority 5): Emergency alert failed. Please seek help nearby.
+2026-02-13 12:05:14 - NavigationSystem - ERROR - Emergency SMS failed
+2026-02-13 12:05:49 - NavigationSystem - INFO - Executing action for 1 press(es)
+2026-02-13 12:05:49 - NavigationSystem - INFO - Single press detected - performing scene scan
+2026-02-13 12:05:49 - NavigationSystem - INFO - Speaking (priority 5): Scanning
+2026-02-13 12:05:49 - NavigationSystem - INFO - Speaking (priority 5): No significant objects detected
+2026-02-13 12:07:02 - NavigationSystem - INFO - Executing action for 1 press(es)
+2026-02-13 12:07:02 - NavigationSystem - INFO - Single press detected - performing scene scan
+2026-02-13 12:07:02 - NavigationSystem - INFO - Speaking (priority 5): Scanning
+2026-02-13 12:07:02 - NavigationSystem - INFO - Speaking (priority 5): No significant objects detected
+2026-02-13 12:08:07 - NavigationSystem - INFO - Executing action for 1 press(es)
+2026-02-13 12:08:07 - NavigationSystem - INFO - Single press detected - performing scene scan
+2026-02-13 12:08:07 - NavigationSystem - INFO - Speaking (priority 5): Scanning
+2026-02-13 12:08:07 - NavigationSystem - INFO - Speaking (priority 5): No significant objects detected
+2026-02-13 12:08:12 - NavigationSystem - INFO - Executing action for 1 press(es)
+2026-02-13 12:08:12 - NavigationSystem - INFO - Single press detected - performing scene scan
+2026-02-13 12:08:12 - NavigationSystem - INFO - Speaking (priority 5): Scanning
+2026-02-13 12:08:13 - NavigationSystem - INFO - Speaking (priority 5): No significant objects detected
+2026-02-13 12:11:01 - NavigationSystem - INFO - Executing action for 1 press(es)
+2026-02-13 12:11:01 - NavigationSystem - INFO - Single press detected - performing scene scan
+2026-02-13 12:11:01 - NavigationSystem - INFO - Speaking (priority 5): Scanning
+2026-02-13 12:11:01 - NavigationSystem - INFO - Speaking (priority 5): No significant objects detected
+2026-02-13 12:11:03 - NavigationSystem - INFO - Executing action for 1 press(es)
+2026-02-13 12:11:03 - NavigationSystem - INFO - Single press detected - performing scene scan
+2026-02-13 12:11:03 - NavigationSystem - INFO - Speaking (priority 5): Scanning
+2026-02-13 12:11:03 - NavigationSystem - INFO - Speaking (priority 5): No significant objects detected
+2026-02-13 12:11:04 - NavigationSystem - INFO - Executing action for 1 press(es)
+2026-02-13 12:11:04 - NavigationSystem - INFO - Single press detected - performing scene scan
+2026-02-13 12:11:04 - NavigationSystem - INFO - Speaking (priority 5): Scanning
+2026-02-13 12:11:05 - NavigationSystem - INFO - Speaking (priority 5): No significant objects detected
+2026-02-13 12:11:42 - NavigationSystem - INFO - Shutting down navigation system...
+2026-02-13 12:11:42 - NavigationSystem - INFO - Speaking (priority 5): System shutting down
+2026-02-13 12:11:42 - NavigationSystem - INFO - Cleaning up button handler
+2026-02-13 12:11:43 - NavigationSystem - INFO - Button handler cleanup complete
+2026-02-13 12:11:43 - NavigationSystem - INFO - Camera released
+2026-02-13 12:11:43 - NavigationSystem - INFO - Cleaning up audio manager
+2026-02-13 12:11:43 - NavigationSystem - INFO - Shutting down navigation system...
+2026-02-13 12:11:43 - NavigationSystem - INFO - Speaking (priority 5): System shutting down
+2026-02-13 12:11:43 - NavigationSystem - INFO - Cleaning up button handler
+2026-02-13 12:11:43 - NavigationSystem - INFO - Button handler cleanup complete
+2026-02-13 12:11:43 - NavigationSystem - INFO - Cleaning up audio manager
+2026-02-13 12:11:43 - NavigationSystem - INFO - Audio manager cleanup complete
+2026-02-13 12:11:43 - NavigationSystem - INFO - Shutdown complete

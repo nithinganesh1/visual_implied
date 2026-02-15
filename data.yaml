@@ -1,0 +1,23 @@
+path: ../All_in_one
+
+train: images/train
+val: images/valid
+test: images/test
+
+nc: 14
+names:
+  - vehicle
+  - Toilet
+  - bench
+  - green_pedestrian_light
+  - red_pedestrian_light
+  - stair
+  - zebra
+  - 10
+  - 100
+  - 20
+  - 200
+  - 2000
+  - 50
+  - 500
+
