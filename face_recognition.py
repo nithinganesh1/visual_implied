@@ -428,44 +428,7 @@ class FaceRecognitionModule:
             logger.info(f"Saved {len(self.embeddings_db)} person embeddings")
         except Exception as e:
             logger.error(f"Failed to save embeddings database: {e}")
-
     
-    def extract_embedding(self, face_image):
-        """
-        Extract 128-d embedding from face
-        
-        Args:
-            face_image: Cropped face image
-        
-        Returns:
-            128-d embedding vector or None
-        """
-        if self.embedding_model is None:
-            logger.warning("Embedding model not loaded")
-            return None
-        
-        if face_image is None or face_image.size == 0:
-            return None
-        
-        try:
-            # Resize to model input size (160x160 for FaceNet)
-            face_resized = cv2.resize(face_image, (160, 160))
-            face_normalized = face_resized.astype('float32') / 255.0
-            
-            # Add batch dimension
-            x = np.expand_dims(face_normalized, axis=0)
-            
-            # Get embedding
-            embedding = self.embedding_model.predict(x, verbose=0)
-            
-            # Normalize embedding
-            embedding = embedding / np.linalg.norm(embedding)
-            
-            return embedding[0]
-        
-        except Exception as e:
-            logger.error(f"Embedding extraction error: {e}")
-            return None
     
     def recognize_face(self, embedding):
         """
