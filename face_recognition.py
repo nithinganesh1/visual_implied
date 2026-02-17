@@ -200,6 +200,20 @@ class FaceRecognitionModule:
             logger.debug(f"Empty face_image received (None or zero-size): {getattr(face_image, 'shape', None)}")
             return None
 
+        # If the crop is too small, pad it so resize and feature extraction succeed
+        try:
+            h_f, w_f = face_image.shape[:2]
+            if h_f < 40 or w_f < 40:
+                logger.debug(f"Padding small face crop from {face_image.shape}")
+                top = max(0, (160 - h_f) // 2)
+                bottom = max(0, 160 - h_f - top)
+                left = max(0, (160 - w_f) // 2)
+                right = max(0, 160 - w_f - left)
+                face_image = cv2.copyMakeBorder(face_image, top, bottom, left, right, cv2.BORDER_CONSTANT, value=[0,0,0])
+                logger.debug(f"Padded face crop shape: {face_image.shape}")
+        except Exception as e:
+            logger.debug(f"Failed padding face crop: {e}")
+
         try:
             # If FaceNet model is available, use it for high-quality embeddings
             if self.embedding_model is not None:

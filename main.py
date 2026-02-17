@@ -327,7 +327,23 @@ class NavigationSystem:
                 x1c, y1c = max(0, x1), max(0, y1)
                 x2c, y2c = min(w, x2), min(h, y2)
                 face_crop = frame[y1c:y2c, x1c:x2c]
-                logger.debug(f"Face crop shape: {getattr(face_crop, 'shape', None)}")
+                # If crop is too small, expand bbox by 25% around center
+                fc_shape = getattr(face_crop, 'shape', None)
+                if not fc_shape or fc_shape[0] == 0 or fc_shape[1] == 0 or fc_shape[0] < 40 or fc_shape[1] < 40:
+                    logger.info(f"Face crop too small {fc_shape}, expanding bbox")
+                    # compute center and expand
+                    cx = (x1 + x2) // 2
+                    cy = (y1 + y2) // 2
+                    bw = max(40, int((x2 - x1) * 1.5))
+                    bh = max(40, int((y2 - y1) * 1.5))
+                    x1e = max(0, cx - bw // 2)
+                    y1e = max(0, cy - bh // 2)
+                    x2e = min(w, cx + bw // 2)
+                    y2e = min(h, cy + bh // 2)
+                    face_crop = frame[y1e:y2e, x1e:x2e]
+                    logger.info(f"Expanded face bbox to {(x1e,y1e,x2e,y2e)}, crop shape: {getattr(face_crop,'shape',None)}")
+                else:
+                    logger.debug(f"Face crop shape: {fc_shape}")
                 
                 # Extract embedding
                 embedding = self.face_recognition.extract_embedding(face_crop)
