@@ -241,7 +241,7 @@ class TwoButtonHandler:
     
     def __init__(self, on_scan=None, on_confirm=None, on_emergency=None,
                  scan_button_pin=17, emergency_button_pin=27,
-                 confirm_timeout=3.0):
+                 confirm_timeout=10.0):
         """
         Initialize two-button handler
         
