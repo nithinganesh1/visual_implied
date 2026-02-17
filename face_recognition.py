@@ -196,29 +196,45 @@ class FaceRecognitionModule:
         Returns:
             128-d embedding vector or None
         """
-        if self.embedding_model is None:
-            logger.warning("Embedding model not loaded")
-            return None
-        
         if face_image is None or face_image.size == 0:
             return None
-        
+
         try:
-            # Resize to model input size (160x160 for FaceNet)
-            face_resized = cv2.resize(face_image, (160, 160))
-            face_normalized = face_resized.astype('float32') / 255.0
-            
-            # Add batch dimension
-            x = np.expand_dims(face_normalized, axis=0)
-            
-            # Get embedding
-            embedding = self.embedding_model.predict(x, verbose=0)
-            
-            # Normalize embedding
-            embedding = embedding / np.linalg.norm(embedding)
-            
-            return embedding[0]
-        
+            # If FaceNet model is available, use it for high-quality embeddings
+            if self.embedding_model is not None:
+                face_resized = cv2.resize(face_image, (160, 160))
+                face_normalized = face_resized.astype('float32') / 255.0
+                x = np.expand_dims(face_normalized, axis=0)
+                embedding = self.embedding_model.predict(x, verbose=0)
+                embedding = embedding / (np.linalg.norm(embedding) + 1e-7)
+                return embedding[0]
+
+            # Fallback: compute a simple OpenCV-based embedding (histogram + edge stats)
+            logger.debug("Embedding model not loaded, using OpenCV fallback embedding")
+            gray_face = cv2.cvtColor(face_image, cv2.COLOR_BGR2GRAY)
+            face_resized = cv2.resize(gray_face, (160, 160))
+
+            # Basic statistical features
+            mean = np.mean(face_resized)
+            std = np.std(face_resized)
+
+            # Histogram (16 bins)
+            hist = cv2.calcHist([face_resized], [0], None, [16], [0, 256]).flatten()
+            hist = hist / (hist.sum() + 1e-7)
+
+            # Edge magnitude statistics
+            sobelx = cv2.Sobel(face_resized, cv2.CV_64F, 1, 0, ksize=3)
+            sobely = cv2.Sobel(face_resized, cv2.CV_64F, 0, 1, ksize=3)
+            edges_mean = np.mean(np.sqrt(sobelx**2 + sobely**2))
+
+            embedding = np.concatenate([
+                [mean, std, edges_mean],
+                hist[:16],
+                [np.mean(sobelx), np.mean(sobely)]
+            ])
+            embedding = embedding / (np.linalg.norm(embedding) + 1e-7)
+            return embedding
+
         except Exception as e:
             logger.error(f"Embedding extraction error: {e}")
             return None
