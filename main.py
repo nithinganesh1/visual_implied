@@ -321,7 +321,13 @@ class NavigationSystem:
             # Process each face
             for idx, face in enumerate(faces):
                 x1, y1, x2, y2 = face['bbox']
-                face_crop = frame[y1:y2, x1:x2]
+                logger.debug(f"Face bbox: {(x1,y1,x2,y2)}")
+                # Ensure bbox within image bounds
+                h, w = frame.shape[:2]
+                x1c, y1c = max(0, x1), max(0, y1)
+                x2c, y2c = min(w, x2), min(h, y2)
+                face_crop = frame[y1c:y2c, x1c:x2c]
+                logger.debug(f"Face crop shape: {getattr(face_crop, 'shape', None)}")
                 
                 # Extract embedding
                 embedding = self.face_recognition.extract_embedding(face_crop)

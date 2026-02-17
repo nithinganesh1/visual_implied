@@ -197,6 +197,7 @@ class FaceRecognitionModule:
             128-d embedding vector or None
         """
         if face_image is None or face_image.size == 0:
+            logger.debug(f"Empty face_image received (None or zero-size): {getattr(face_image, 'shape', None)}")
             return None
 
         try:
