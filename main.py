@@ -16,6 +16,8 @@ from audio_manager import AudioManager
 from gps_module import GPSModule
 from gsm_module import GSMModule
 from ocr_module import OCRModule
+from ultrasonic_module import UltrasonicModule
+from buzzer_module import BuzzerModule
 from utils import logger
 
 class NavigationSystem:
@@ -44,6 +46,23 @@ class NavigationSystem:
                 on_emergency_button=self.handle_emergency,
                 on_ocr_button=self.handle_ocr_button
             )
+            
+            # Optional: Ultrasonic sensor and Buzzer (run independently in background threads)
+            try:
+                self.buzzer = BuzzerModule(buzzer_pin=26)
+                self.ultrasonic = UltrasonicModule(
+                    trigger_pin=23, 
+                    echo_pin=24, 
+                    threshold_distance=30  # Alert when object < 30cm
+                )
+                # Connect obstacle detection to buzzer feedback
+                self.ultrasonic.on_obstacle_alert = self._on_obstacle_detected
+                self.ultrasonic.on_obstacle_clear = self._on_obstacle_cleared
+                logger.info("Ultrasonic and Buzzer modules initialized")
+            except Exception as e:
+                logger.warning(f"Ultrasonic/Buzzer initialization failed: {e} (will continue without them)")
+                self.buzzer = None
+                self.ultrasonic = None
             
             # System state
             self.last_scan_results = None
@@ -222,6 +241,30 @@ class NavigationSystem:
             logger.error(f"OCR handler error: {e}")
             self.audio.speak("Error during text extraction")
     
+    def _on_obstacle_detected(self, distance_cm):
+        """Callback when ultrasonic detects obstacle within threshold"""
+        logger.warning(f"Obstacle detected at {distance_cm:.1f}cm")
+        
+        # Provide buzzer and audio feedback
+        if self.buzzer:
+            # Play warning pattern based on distance (closer = faster)
+            proximity = 1.0 - (distance_cm / 30.0)  # Normalize to 0-1
+            self.buzzer.obstacle_warning_continuous(proximity_ratio=proximity, cycles=2)
+        
+        # Optional: Also speak alert
+        if distance_cm < 20:
+            self.audio.speak("Obstacle very close", priority=1)
+        elif distance_cm < 30:
+            self.audio.speak("Obstacle ahead", priority=2)
+    
+    def _on_obstacle_cleared(self):
+        """Callback when obstacle is cleared"""
+        logger.info("Obstacle cleared")
+        
+        # Play confirmation beep
+        if self.buzzer:
+            self.buzzer.beep_async(duration=0.1, frequency='done', volume=0.6)
+    
     def shutdown(self, signum=None, frame=None):
         """Clean shutdown"""
         logger.info("Shutting down navigation system...")
@@ -240,6 +283,10 @@ class NavigationSystem:
             self.audio.cleanup()
         if hasattr(self, 'ocr'):
             self.ocr.cleanup()
+        if hasattr(self, 'ultrasonic') and self.ultrasonic:
+            self.ultrasonic.cleanup()
+        if hasattr(self, 'buzzer') and self.buzzer:
+            self.buzzer.cleanup()
         
         logger.info("Shutdown complete")
         sys.exit(0)
