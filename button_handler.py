@@ -15,17 +15,20 @@ class ButtonHandler:
     
     def __init__(self, on_single_press=None, on_double_press=None, 
                  on_triple_press=None, on_emergency_button=None, on_ocr_button=None,
+                 on_ocr_single_press=None, on_ocr_double_press=None,
                  primary_button_pin=17, emergency_button_pin=None, ocr_button_pin=27,
                  double_press_window=0.5, triple_press_window=0.8):
         """
         Initialize button handler
         
         Args:
-            on_single_press: Callback for single press
-            on_double_press: Callback for double press
-            on_triple_press: Callback for triple press
+            on_single_press: Callback for primary button single press
+            on_double_press: Callback for primary button double press
+            on_triple_press: Callback for primary button triple press
             on_emergency_button: Callback for emergency button
-            on_ocr_button: Callback for OCR button
+            on_ocr_button: Callback for OCR button (legacy)
+            on_ocr_single_press: Callback for OCR button single press (face recognition)
+            on_ocr_double_press: Callback for OCR button double press (OCR)
             primary_button_pin: GPIO pin for primary button
             emergency_button_pin: GPIO pin for emergency button (optional)
             ocr_button_pin: GPIO pin for OCR button (default=27)
@@ -37,6 +40,8 @@ class ButtonHandler:
         self.on_triple_press = on_triple_press
         self.on_emergency_button = on_emergency_button
         self.on_ocr_button = on_ocr_button
+        self.on_ocr_single_press = on_ocr_single_press or on_single_press  # Fallback to on_single_press
+        self.on_ocr_double_press = on_ocr_double_press or on_ocr_button  # Fallback to on_ocr_button
         
         self.double_press_window = double_press_window
         self.triple_press_window = triple_press_window
@@ -72,10 +77,16 @@ class ButtonHandler:
             )
             self.emergency_button.when_pressed = self._handle_emergency_press
         
-        # Initialize OCR button
+        # Initialize OCR button (GPIO 27) with press counting
+        # Single press = Face recognition
+        # Double press = OCR text reading
         self.ocr_button = None
+        self.ocr_press_count = 0
+        self.ocr_press_timer = None
+        self.ocr_press_window = 0.5
+        
         if ocr_button_pin is not None:
-            logger.info(f"Initializing OCR button on GPIO {ocr_button_pin}")
+            logger.info(f"Initializing GPIO {ocr_button_pin} (Single=Face Recognition, Double=OCR)")
             self.ocr_button = Button(
                 ocr_button_pin,
                 pull_up=True,
@@ -162,14 +173,42 @@ class ButtonHandler:
             logger.error(f"Error executing emergency action: {e}")
     
     def _handle_ocr_button_press(self):
-        """Handle OCR button press"""
-        logger.info("OCR button pressed")
+        """Handle GPIO 27 press with counting logic"""
+        # Increment press count
+        self.ocr_press_count += 1
+        
+        logger.debug(f"GPIO 27 press {self.ocr_press_count} detected")
+        
+        # Cancel any existing timer
+        if self.ocr_press_timer:
+            self.ocr_press_timer.cancel()
+        
+        # Wait for potential second press
+        self.ocr_press_timer = Timer(self.ocr_press_window, self._execute_ocr_action)
+        self.ocr_press_timer.start()
+    
+    def _execute_ocr_action(self):
+        """Execute action based on GPIO 27 press count"""
+        count = self.ocr_press_count
+        
+        logger.info(f"GPIO 27 executing action for {count} press(es)")
         
         try:
-            if self.on_ocr_button:
-                self.on_ocr_button()
+            if count == 1:
+                # Single press = Face Recognition
+                if self.on_ocr_single_press:
+                    logger.info("Face Recognition triggered")
+                    self.on_ocr_single_press()
+            elif count >= 2:
+                # Double press or more = OCR
+                if self.on_ocr_double_press:
+                    logger.info("OCR triggered")
+                    self.on_ocr_double_press()
         except Exception as e:
-            logger.error(f"Error executing OCR action: {e}")
+            logger.error(f"Error executing GPIO 27 action: {e}")
+        finally:
+            # Reset press count
+            self.ocr_press_count = 0
     
     def cleanup(self):
         """Cleanup GPIO resources"""

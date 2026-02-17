@@ -6,6 +6,10 @@ ultralytics>=8.0.0
 opencv-python>=4.8.0
 numpy>=1.24.0
 
+# Face Recognition
+mediapipe>=0.10.0
+tensorflow>=2.13.0  # For FaceNet embeddings
+
 # OCR Text Recognition
 easyocr>=1.7.0
 
@@ -22,10 +26,18 @@ pyserial>=3.5
 # Hardware Configuration:
 # HC-SR04 Ultrasonic: Trigger=GPIO23, Echo=GPIO24
 # Passive Buzzer: GPIO26 (PWM-capable)
-# All buttons work via gpiozero with pull-up resistors
+# GPIO 17: Primary button (navigation)
+# GPIO 27: Face recognition (single) / OCR (double)
 
 # System dependencies (install via apt):
 # sudo apt-get update
 # sudo apt-get install -y espeak python3-pip python3-opencv
 # sudo apt-get install -y libatlas-base-dev libopenblas-dev
 # sudo apt-get install -y python3-pigpio  # For PWM support
+
+# SETUP FACE RECOGNITION:
+# 1. Run: python3 generate_embeddings.py
+# 2. This processes ~/visual_implied/georgy/ folder
+# 3. Creates face_embeddings.json
+# 4. Optionally delete georgy folder
+# 5. System ready for face recognition!

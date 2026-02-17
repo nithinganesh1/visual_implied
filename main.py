@@ -7,6 +7,7 @@ Main Entry Point - Raspberry Pi 5 Optimized
 import sys
 import time
 import signal
+import cv2
 from threading import Event
 
 from detector import ObjectDetector
@@ -18,6 +19,7 @@ from gsm_module import GSMModule
 from ocr_module import OCRModule
 from ultrasonic_module import UltrasonicModule
 from buzzer_module import BuzzerModule
+from face_recognition import FaceRecognitionModule
 from utils import logger
 
 class NavigationSystem:
@@ -39,12 +41,30 @@ class NavigationSystem:
             self.decision_engine = DecisionEngine(self.audio)
             self.ocr = OCRModule(languages=['en', 'hi'], gpu=False)
             
+            # Optional: Face Recognition Module (loads embeddings from file)
+            try:
+                self.face_recognition = FaceRecognitionModule(
+                    embedding_model_path="facenet_keras.h5",  # Can be None if not available
+                    embeddings_db_path="face_embeddings.json",
+                    confidence_threshold=0.6
+                )
+                logger.info(f"Face Recognition ready - {self.face_recognition.get_person_count()} people recognized")
+                self.audio.speak("Face recognition loaded")
+            except Exception as e:
+                logger.warning(f"Face Recognition not available: {e}")
+                self.face_recognition = None
+            
             # Button handler (will manage button events)
+            # GPIO 17: Primary (single=scan, double=confirm crossing, press+hold=emergency)
+            # GPIO 27: Face/OCR (single=face recognition, double=OCR)
             self.button_handler = ButtonHandler(
-                on_single_press=self.handle_single_press,
-                on_double_press=self.handle_double_press,
+                on_single_press=self.handle_single_press,  # GPIO 17 single = scene scan
+                on_double_press=self.handle_double_press,  # GPIO 17 double = crossing confirm
                 on_emergency_button=self.handle_emergency,
-                on_ocr_button=self.handle_ocr_button
+                on_ocr_single_press=self.handle_face_recognition,  # GPIO 27 single = face
+                on_ocr_double_press=self.handle_ocr_button,  # GPIO 27 double = OCR
+                primary_button_pin=17,
+                ocr_button_pin=27
             )
             
             # Optional: Ultrasonic sensor and Buzzer (run independently in background threads)
@@ -268,6 +288,67 @@ class NavigationSystem:
             self.buzzer.stop_tone()
             self.buzzer.beep(duration=0.2, frequency=1200, volume=0.6)
     
+    def handle_face_recognition(self):
+        """Handle GPIO 27 single press - Face Recognition"""
+        if not self.face_recognition:
+            self.audio.speak("Face recognition not available")
+            return
+        
+        logger.info("Face Recognition triggered - GPIO 27 single press")
+        self.audio.speak("Analyzing face")
+        
+        try:
+            # Get latest frame
+            frame = self.detector.get_latest_frame()
+            
+            if frame is None:
+                logger.error("No frame available for face recognition")
+                self.audio.speak("No frame available")
+                return
+            
+            # Detect faces
+            faces = self.face_recognition.detect_faces(frame)
+            
+            if not faces:
+                logger.info("No faces detected")
+                self.audio.speak("No person detected")
+                print("No faces detected in frame")
+                return
+            
+            print(f"\n=== FACE RECOGNITION ===")
+            print(f"Detected {len(faces)} face(s)")
+            
+            # Process each face
+            for idx, face in enumerate(faces):
+                x1, y1, x2, y2 = face['bbox']
+                face_crop = frame[y1:y2, x1:x2]
+                
+                # Extract embedding
+                embedding = self.face_recognition.extract_embedding(face_crop)
+                
+                if embedding is not None:
+                    # Recognize face
+                    person_name, confidence = self.face_recognition.recognize_face(embedding)
+                    
+                    if person_name:
+                        message = f"Found {person_name} with {confidence:.0%} confidence"
+                        logger.info(message)
+                        self.audio.speak(f"Found {person_name}")
+                        print(f"✓ {message}")
+                    else:
+                        message = f"Unknown person (confidence: {confidence:.0%})"
+                        logger.info(message)
+                        self.audio.speak("Unknown person detected")
+                        print(f"✗ {message}")
+                else:
+                    logger.error("Failed to extract embedding")
+                    self.audio.speak("Failed to extract face features")
+        
+        except Exception as e:
+            logger.error(f"Face recognition error: {e}")
+            self.audio.speak("Face recognition error")
+            print(f"Error: {e}")
+    
     def shutdown(self, signum=None, frame=None):
         """Clean shutdown"""
         logger.info("Shutting down navigation system...")
@@ -286,6 +367,8 @@ class NavigationSystem:
             self.audio.cleanup()
         if hasattr(self, 'ocr'):
             self.ocr.cleanup()
+        if hasattr(self, 'face_recognition') and self.face_recognition:
+            self.face_recognition.cleanup()
         if hasattr(self, 'ultrasonic') and self.ultrasonic:
             self.ultrasonic.cleanup()
         if hasattr(self, 'buzzer') and self.buzzer:
