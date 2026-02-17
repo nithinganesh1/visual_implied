@@ -49,27 +49,17 @@ class FaceRecognitionModule:
         self.face_detector = None
         if MP_AVAILABLE:
             try:
-                from mediapipe.tasks import python
-                from mediapipe.tasks.python import vision
-                
-                # Use detection API
-                base_options = python.BaseOptions(model_asset_path=None)
-                options = vision.FaceDetectorOptions(base_options=base_options)
-                self.face_detector = vision.FaceDetector.create_from_options(options)
-                logger.info("MediaPipe Face Detector initialized")
+                # Try solutions API (works with mediapipe-rpi4)
+                mp_face_detection = mp.solutions.face_detection
+                self.face_detector = mp_face_detection.FaceDetection(
+                    model_selection=0,
+                    min_detection_confidence=0.7
+                )
+                logger.info("MediaPipe Solutions Face Detector initialized")
             except Exception as e:
-                logger.warning(f"MediaPipe Tasks API failed: {e}, trying solutions API...")
-                try:
-                    mp_face_detection = mp.solutions.face_detection
-                    self.face_detector = mp_face_detection.FaceDetection(
-                        model_selection=0,
-                        min_detection_confidence=0.7
-                    )
-                    self.use_solutions_api = True
-                    logger.info("MediaPipe Solutions Face Detector initialized")
-                except Exception as e2:
-                    logger.error(f"Both MediaPipe APIs failed: {e2}")
-                    self.face_detector = None
+                logger.warning(f"MediaPipe initialization failed: {e}")
+                logger.info("Will use OpenCV Haar Cascade as fallback")
+                self.face_detector = None
         else:
             logger.warning("MediaPipe not available - face detection disabled")
         
@@ -396,51 +386,7 @@ class FaceRecognitionModule:
             logger.info(f"Saved {len(self.embeddings_db)} person embeddings")
         except Exception as e:
             logger.error(f"Failed to save embeddings database: {e}")
-    
-    def detect_faces(self, frame):
-        """
-        Detect faces in frame
-        
-        Args:
-            frame: Input image frame
-        
-        Returns:
-            List of face detections with bounding boxes
-        """
-        if frame is None:
-            return []
-        
-        try:
-            # Convert to RGB for MediaPipe
-            rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            results = self.face_detector.process(rgb_frame)
-            
-            detections = []
-            if results.detections:
-                h, w = frame.shape[:2]
-                
-                for detection in results.detections:
-                    bbox = detection.location_data.relative_bounding_box
-                    
-                    # Convert to pixel coordinates
-                    x1 = max(0, int(bbox.xmin * w))
-                    y1 = max(0, int(bbox.ymin * h))
-                    x2 = min(w, int((bbox.xmin + bbox.width) * w))
-                    y2 = min(h, int((bbox.ymin + bbox.height) * h))
-                    
-                    # Ensure valid box
-                    if x2 > x1 and y2 > y1:
-                        detections.append({
-                            'bbox': (x1, y1, x2, y2),
-                            'center': ((x1 + x2) // 2, (y1 + y2) // 2),
-                            'confidence': float(detection.score[0]) if detection.score else 0.8
-                        })
-            
-            return detections
-        
-        except Exception as e:
-            logger.error(f"Face detection error: {e}")
-            return []
+
     
     def extract_embedding(self, face_image):
         """
