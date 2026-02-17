@@ -6,6 +6,9 @@ ultralytics>=8.0.0
 opencv-python>=4.8.0
 numpy>=1.24.0
 
+# OCR Text Recognition
+easyocr>=1.7.0
+
 # GPIO Control (Raspberry Pi 5 compatible)
 gpiozero>=2.0
 

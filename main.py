@@ -15,6 +15,7 @@ from decision_engine import DecisionEngine
 from audio_manager import AudioManager
 from gps_module import GPSModule
 from gsm_module import GSMModule
+from ocr_module import OCRModule
 from utils import logger
 
 class NavigationSystem:
@@ -34,12 +35,14 @@ class NavigationSystem:
             self.gps = GPSModule()
             self.gsm = GSMModule(phone_number="+916282670289")
             self.decision_engine = DecisionEngine(self.audio)
+            self.ocr = OCRModule(languages=['en', 'hi'], gpu=False)
             
             # Button handler (will manage button events)
             self.button_handler = ButtonHandler(
                 on_single_press=self.handle_single_press,
                 on_double_press=self.handle_double_press,
-                on_emergency_button=self.handle_emergency
+                on_emergency_button=self.handle_emergency,
+                on_ocr_button=self.handle_ocr_button
             )
             
             # System state
@@ -186,6 +189,39 @@ class NavigationSystem:
             logger.error(f"Emergency handler error: {e}")
             self.audio.speak("Emergency alert failed")
     
+    def handle_ocr_button(self):
+        """Handle OCR button press - read text from latest frame"""
+        logger.info("OCR button pressed - extracting text from frame")
+        self.audio.speak("Extracting text")
+        
+        try:
+            # Get the latest frame
+            frame = self.detector.get_latest_frame()
+            
+            if frame is None:
+                logger.error("No frame available for OCR")
+                self.audio.speak("No frame available. Please try again")
+                return
+            
+            # Perform OCR
+            extracted_text, detections, annotated_frame = self.ocr.extract_text(frame)
+            
+            if extracted_text:
+                logger.info(f"Extracted text: {extracted_text}")
+                self.audio.speak(f"Text found: {extracted_text}")
+                print(f"\n=== EXTRACTED TEXT ===")
+                print(extracted_text)
+                print(f"Detections: {len(detections)}")
+                for det in detections:
+                    print(f"  - {det['text']} (confidence: {det['confidence']:.2f})")
+            else:
+                logger.info("No text detected in frame")
+                self.audio.speak("No text detected in the frame")
+        
+        except Exception as e:
+            logger.error(f"OCR handler error: {e}")
+            self.audio.speak("Error during text extraction")
+    
     def shutdown(self, signum=None, frame=None):
         """Clean shutdown"""
         logger.info("Shutting down navigation system...")
@@ -202,6 +238,8 @@ class NavigationSystem:
             self.gps.cleanup()
         if hasattr(self, 'audio'):
             self.audio.cleanup()
+        if hasattr(self, 'ocr'):
+            self.ocr.cleanup()
         
         logger.info("Shutdown complete")
         sys.exit(0)

@@ -38,6 +38,9 @@ class ObjectDetector:
         self.confidence_threshold = confidence_threshold
         self.include_currency = bool(include_currency)
         
+        # Store latest frame for OCR and other uses
+        self.latest_frame = None
+        
         try:
             # Load YOLO model
             logger.info(f"Loading YOLO model from {model_path}")
@@ -58,6 +61,7 @@ class ObjectDetector:
             # Get frame dimensions
             ret, frame = self.camera.read()
             if ret:
+                self.latest_frame = frame
                 self.frame_height, self.frame_width = frame.shape[:2]
                 logger.info(f"Camera initialized: {self.frame_width}x{self.frame_height}")
             else:
@@ -73,6 +77,9 @@ class ObjectDetector:
         if not ret:
             logger.error("Failed to capture frame")
             return []
+        
+        # Store latest frame for OCR
+        self.latest_frame = frame
         return self._process_frame(frame)
     
     def detect_continuous(self, num_frames=5, interval=0.2):
@@ -82,6 +89,8 @@ class ObjectDetector:
         for i in range(num_frames):
             ret, frame = self.camera.read()
             if ret:
+                # Store latest frame for OCR
+                self.latest_frame = frame
                 detections = self._process_frame(frame)
                 results.append(detections)
             else:
@@ -89,6 +98,10 @@ class ObjectDetector:
             if i < num_frames - 1:
                 time.sleep(interval)
         return results
+    
+    def get_latest_frame(self):
+        """Get the latest captured frame"""
+        return self.latest_frame
     
     def _process_frame(self, frame):
         """Process a single frame and return filtered detections"""

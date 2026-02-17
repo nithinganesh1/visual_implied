@@ -14,8 +14,8 @@ class ButtonHandler:
     """Manages button inputs with press counting logic"""
     
     def __init__(self, on_single_press=None, on_double_press=None, 
-                 on_triple_press=None, on_emergency_button=None,
-                 primary_button_pin=17, emergency_button_pin=None,
+                 on_triple_press=None, on_emergency_button=None, on_ocr_button=None,
+                 primary_button_pin=17, emergency_button_pin=None, ocr_button_pin=27,
                  double_press_window=0.5, triple_press_window=0.8):
         """
         Initialize button handler
@@ -25,8 +25,10 @@ class ButtonHandler:
             on_double_press: Callback for double press
             on_triple_press: Callback for triple press
             on_emergency_button: Callback for emergency button
+            on_ocr_button: Callback for OCR button
             primary_button_pin: GPIO pin for primary button
             emergency_button_pin: GPIO pin for emergency button (optional)
+            ocr_button_pin: GPIO pin for OCR button (default=27)
             double_press_window: Time window for double press detection (seconds)
             triple_press_window: Time window for triple press detection (seconds)
         """
@@ -34,6 +36,7 @@ class ButtonHandler:
         self.on_double_press = on_double_press
         self.on_triple_press = on_triple_press
         self.on_emergency_button = on_emergency_button
+        self.on_ocr_button = on_ocr_button
         
         self.double_press_window = double_press_window
         self.triple_press_window = triple_press_window
@@ -68,6 +71,17 @@ class ButtonHandler:
                 bounce_time=0.05
             )
             self.emergency_button.when_pressed = self._handle_emergency_press
+        
+        # Initialize OCR button
+        self.ocr_button = None
+        if ocr_button_pin is not None:
+            logger.info(f"Initializing OCR button on GPIO {ocr_button_pin}")
+            self.ocr_button = Button(
+                ocr_button_pin,
+                pull_up=True,
+                bounce_time=0.05
+            )
+            self.ocr_button.when_pressed = self._handle_ocr_button_press
         
         logger.info("Button handler initialized")
     
@@ -147,6 +161,16 @@ class ButtonHandler:
         except Exception as e:
             logger.error(f"Error executing emergency action: {e}")
     
+    def _handle_ocr_button_press(self):
+        """Handle OCR button press"""
+        logger.info("OCR button pressed")
+        
+        try:
+            if self.on_ocr_button:
+                self.on_ocr_button()
+        except Exception as e:
+            logger.error(f"Error executing OCR action: {e}")
+    
     def cleanup(self):
         """Cleanup GPIO resources"""
         logger.info("Cleaning up button handler")
@@ -161,6 +185,9 @@ class ButtonHandler:
         
         if self.emergency_button:
             self.emergency_button.close()
+        
+        if self.ocr_button:
+            self.ocr_button.close()
         
         logger.info("Button handler cleanup complete")
 
