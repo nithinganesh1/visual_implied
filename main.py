@@ -30,7 +30,7 @@ class NavigationSystem:
         try:
             # Core components
             self.audio = AudioManager()
-            self.detector = ObjectDetector(model_path="best.pt")
+            self.detector = ObjectDetector(model_path="best.pt", include_currency=True)
             self.gps = GPSModule()
             self.gsm = GSMModule(phone_number="+916282670289")
             self.decision_engine = DecisionEngine(self.audio)

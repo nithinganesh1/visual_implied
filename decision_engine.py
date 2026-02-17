@@ -42,6 +42,20 @@ class DecisionEngine:
         # Build priority-based announcements
         announcements = []
         
+        # Handle currency detections (announce denominations)
+        currency_announcements = []
+        from detector import ObjectDetector
+        currency_classes = ObjectDetector.CURRENCY_CLASSES
+        for denom in sorted(currency_classes):
+            if denom in objects_by_type:
+                count = len(objects_by_type[denom])
+                currency_announcements.append(f"{denom} rupee notes {count}")
+        
+        if currency_announcements:
+            cur_msg = "Detected currency: " + ", ".join(currency_announcements)
+            announcements.append(cur_msg)
+            self.audio.speak_with_priority(cur_msg, priority=2, obj_type="currency")
+        
         # 1. Moving vehicles (highest priority)
         if 'vehicle' in objects_by_type:
             for vehicle in objects_by_type['vehicle']:

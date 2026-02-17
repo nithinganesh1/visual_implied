@@ -12,11 +12,15 @@ from utils import logger
 class ObjectDetector:
     """Handles YOLO-based object detection"""
     
-    # Detection classes (currency removed)
+    # Detection classes (includes currency)
     CLASSES = [
         'vehicle', 'Toilet', 'bench', 'green_pedestrian_light',
-        'red_pedestrian_light', 'stair', 'zebra'
+        'red_pedestrian_light', 'stair', 'zebra','10', '100', '20',
+        '200', '2000', '50', '500'
     ]
+    
+    # Currency classes for filtering
+    CURRENCY_CLASSES = {'10', '100', '20', '200', '2000', '50', '500'}
     
     # Navigation priority order
     PRIORITY_ORDER = [
@@ -29,9 +33,10 @@ class ObjectDetector:
         'green_pedestrian_light'
     ]
     
-    def __init__(self, model_path="best.pt", confidence_threshold=0.6, camera_index=0):
+    def __init__(self, model_path="best.pt", confidence_threshold=0.6, camera_index=0, include_currency=False):
         """Initialize detector with YOLO model and camera"""
         self.confidence_threshold = confidence_threshold
+        self.include_currency = bool(include_currency)
         
         try:
             # Load YOLO model
@@ -97,6 +102,14 @@ class ObjectDetector:
             
             class_id = int(box.cls[0])
             class_name = self.CLASSES[class_id] if class_id < len(self.CLASSES) else "unknown"
+            
+            confidence = float(box.conf[0])
+            if confidence < self.confidence_threshold:
+                continue
+            
+            # Skip currency classes unless explicitly enabled
+            if class_name in self.CURRENCY_CLASSES and not self.include_currency:
+                continue
             
             # Get bounding box coordinates
             x1, y1, x2, y2 = box.xyxy[0].cpu().numpy()
