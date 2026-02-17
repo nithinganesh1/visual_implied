@@ -14,29 +14,40 @@ from utils import logger
 def test_buzzer_only():
     """Test buzzer module independently"""
     print("\n=== BUZZER TEST ===")
-    print("Testing buzzer tones...")
+    print("Testing continuous buzzer tones and patterns...\n")
     
     try:
         buzzer = BuzzerModule(buzzer_pin=26)
         
-        # Test different tones
-        tones = ['beep', 'alert', 'warning', 'obstacle', 'done', 'error']
+        # Test 1: Single continuous tone
+        print("1. Continuous tone (2 seconds)...")
+        buzzer.play_continuous(frequency=1000, volume=0.8)
+        time.sleep(2)
+        buzzer.stop_tone()
+        time.sleep(0.5)
         
-        for tone in tones:
-            print(f"Playing: {tone}")
-            buzzer.beep(duration=0.3, frequency=tone, volume=0.8)
+        # Test 2: Different frequencies
+        print("2. Testing different frequencies...")
+        for freq in [500, 800, 1000, 1500, 2000]:
+            print(f"   Playing {freq}Hz...")
+            buzzer.play_continuous(frequency=freq, volume=0.8)
+            time.sleep(1)
+            buzzer.stop_tone()
+            time.sleep(0.3)
+        
+        # Test 3: Proximity patterns
+        print("\n3. Testing proximity-based patterns:")
+        
+        test_distances = [25, 15, 8, 3]
+        for dist in test_distances:
+            print(f"   Distance: {dist}cm (adaptive pattern for 3 seconds)...")
+            buzzer.obstacle_warning_adaptive(distance_cm=dist, max_distance=30)
+            time.sleep(3)
+            buzzer.stop_tone()
             time.sleep(0.5)
         
-        # Test beep sequence
-        print("Playing beep sequence...")
-        buzzer.beep_sequence(beeps=3, duration=0.1, interval=0.1, frequency='beep')
-        
-        # Test alert
-        print("Playing alert pattern...")
-        buzzer.alert(cycles=2)
-        
         buzzer.cleanup()
-        print("✓ Buzzer test complete\n")
+        print("\n✓ Buzzer test complete\n")
         
     except Exception as e:
         print(f"✗ Buzzer test failed: {e}\n")

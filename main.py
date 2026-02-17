@@ -245,25 +245,28 @@ class NavigationSystem:
         """Callback when ultrasonic detects obstacle within threshold"""
         logger.warning(f"Obstacle detected at {distance_cm:.1f}cm")
         
-        # Provide buzzer and audio feedback
+        # Provide adaptive buzzer feedback based on distance (runs in background thread)
         if self.buzzer:
-            # Play warning pattern based on distance (closer = faster)
-            proximity = 1.0 - (distance_cm / 30.0)  # Normalize to 0-1
-            self.buzzer.obstacle_warning_continuous(proximity_ratio=proximity, cycles=2)
+            # Adaptive pattern based on distance - doesn't block main code
+            self.buzzer.obstacle_warning_adaptive(
+                distance_cm=distance_cm,
+                max_distance=30
+            )
         
-        # Optional: Also speak alert
-        if distance_cm < 20:
+        # Optional: Also speak alert for very close obstacles
+        if distance_cm < 15:
             self.audio.speak("Obstacle very close", priority=1)
-        elif distance_cm < 30:
+        elif distance_cm < 25:
             self.audio.speak("Obstacle ahead", priority=2)
     
     def _on_obstacle_cleared(self):
         """Callback when obstacle is cleared"""
         logger.info("Obstacle cleared")
         
-        # Play confirmation beep
+        # Stop continuous buzzer and play confirmation beep
         if self.buzzer:
-            self.buzzer.beep_async(duration=0.1, frequency='done', volume=0.6)
+            self.buzzer.stop_tone()
+            self.buzzer.beep(duration=0.2, frequency=1200, volume=0.6)
     
     def shutdown(self, signum=None, frame=None):
         """Clean shutdown"""
