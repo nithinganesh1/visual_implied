@@ -251,7 +251,18 @@ class FaceRecognitionModule:
             return embedding
 
         except Exception as e:
+            import traceback, time
+            tb = traceback.format_exc()
             logger.error(f"Embedding extraction error: {e}")
+            # Save failed face crop for debugging
+            try:
+                ts = time.strftime("%Y%m%d_%H%M%S")
+                fname = f"failed_face_{ts}.jpg"
+                cv2.imwrite(fname, face_image)
+                logger.error(f"Saved failed face crop to: {fname}")
+            except Exception as e2:
+                logger.error(f"Failed to save failed face crop: {e2}")
+            logger.debug(tb)
             return None
     
     def recognize_face(self, embedding):
