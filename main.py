@@ -144,8 +144,9 @@ class NavigationSystem:
                 )
 
                 import threading
+                # Give user more time to confirm (10s)
                 self.confirmation_timer = threading.Timer(
-                    3.0, self.cancel_confirmation
+                    10.0, self.cancel_confirmation
                 )
                 self.confirmation_timer.start()
 
