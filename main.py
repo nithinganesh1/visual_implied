@@ -295,7 +295,6 @@ class NavigationSystem:
             return
         
         logger.info("Face Recognition triggered - GPIO 27 single press")
-        self.audio.speak("Analyzing face")
         
         try:
             # Get latest frame
@@ -321,7 +320,7 @@ class NavigationSystem:
             # Process each face
             for idx, face in enumerate(faces):
                 x1, y1, x2, y2 = face['bbox']
-                logger.debug(f"Face bbox: {(x1,y1,x2,y2)}")
+                logger.info(f"Face bbox: {(x1,y1,x2,y2)}")
                 # Ensure bbox within image bounds
                 h, w = frame.shape[:2]
                 x1c, y1c = max(0, x1), max(0, y1)
@@ -343,7 +342,7 @@ class NavigationSystem:
                     face_crop = frame[y1e:y2e, x1e:x2e]
                     logger.info(f"Expanded face bbox to {(x1e,y1e,x2e,y2e)}, crop shape: {getattr(face_crop,'shape',None)}")
                 else:
-                    logger.debug(f"Face crop shape: {fc_shape}")
+                    logger.info(f"Face crop shape: {fc_shape}")
                 
                 # Extract embedding
                 embedding = self.face_recognition.extract_embedding(face_crop)
