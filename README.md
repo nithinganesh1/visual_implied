@@ -369,4 +369,4 @@ For issues or questions, refer to project documentation.
 **Python**: 3.9+  
 **Last Updated**: 2025
 # visual_implied
-# visual_implied 
+# visual_implied.
