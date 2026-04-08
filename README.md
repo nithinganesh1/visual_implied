@@ -308,7 +308,7 @@ screen /dev/serial0 9600
 
 2. **Increase Confidence Threshold**:
    ```python
-   self.confidence_threshold = 0.7
+   self.confidence_threshold = 0.7 
    ```
 
 3. **Use Smaller YOLO Model**: Ensure `best.pt` is YOLOv8n (nano)
