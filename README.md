@@ -349,7 +349,7 @@ This project is intended for educational and assistive technology purposes.
 
 ## Contributing
 
-Contributions are welcome! Areas for improvement:
+Contributions are welcome! Areas for improvement::
 
 - Enhanced vehicle trajectory prediction
 - Support for additional object classes
