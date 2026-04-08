@@ -358,7 +358,7 @@ Contributions are welcome! Areas for improvement:
 - Voice command integration
 - Haptic feedback support
 
-## Contact
+## Contact 
 
 For issues or questions, refer to project documentation.
 
