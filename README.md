@@ -349,7 +349,7 @@ This project is intended for educational and assistive technology purposes.
 
 ## Contributing
 
-Contributions are welcome! Areas for improvement::
+Contributions are welcome! Areas for improvement:
 
 - Enhanced vehicle trajectory prediction
 - Support for additional object classes
@@ -369,4 +369,4 @@ For issues or questions, refer to project documentation.
 **Python**: 3.9+  
 **Last Updated**: 2025
 # visual_implied
-# visual_implied
+# visual_implied 
