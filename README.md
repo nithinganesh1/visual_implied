@@ -360,7 +360,7 @@ Contributions are welcome! Areas for improvement:
 
 ## Contact
 
-For issues or questions, refer to project documentation..
+For issues or questions, refer to project documentation.
 
 ---
 
