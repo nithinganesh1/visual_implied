@@ -8,7 +8,7 @@ A production-ready, modular navigation system built for Raspberry Pi 5 using YOL
 - **Intelligent Button Control**: Single/double/triple press detection using gpiozero
 - **Crossing Safety Analysis**: Multi-frame vehicle motion detection to determine crossing safety
 - **GPS Location Tracking**: Continuous GPS parsing for emergency location reporting
-- **Emergency SMS Alerts**: GSM-based SMS with GPS coordinates and Google Maps link.
+- **Emergency SMS Alerts**: GSM-based SMS with GPS coordinates and Google Maps link
 - **Offline Text-to-Speech**: Priority-based audio feedback with cooldown management
 - **Optimized Performance**: Designed specifically for Raspberry Pi 5
 
