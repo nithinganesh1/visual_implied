@@ -21,7 +21,7 @@ A production-ready, modular navigation system built for Raspberry Pi 5 using YOL
 - GPS Module (UART/USB)
 - Speaker for audio output
 
-## Detection Classes
+## Detection Classes 
 
 The system detects the following objects:
 
